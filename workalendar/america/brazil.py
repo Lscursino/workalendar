@@ -8,11 +8,19 @@ from ..registry_tools import iso_register
 class Brazil(WesternCalendar):
     "Brazil"
     FIXED_HOLIDAYS = WesternCalendar.FIXED_HOLIDAYS + (
-        (4, 21, "Tiradentes' Day"),
-        (9, 7, "Independence Day"),
-        (10, 12, "Our Lady of Aparecida"),
-        (11, 2, "All Souls' Day"),
-        (11, 15, "Republic Day"),
+        (1, 1, "Confraternização Universal"),
+        (2, 28, "Carnaval"),
+        (3, 1, "Carnaval"),
+        (3, 2, "Quarta-feira de Cinzas"),
+        (4, 15, "Paixão de Cristo"),
+        (5, 1, "Dia Mundial do Trabalho"),
+        (6, 16, "Corpus Christi"),
+        (9, 7, "Independência do Brasil"),
+        (10, 12, "Nossa Senhora Aparecida"),
+        (11, 2, "Finados"),
+        (11, 15, "Proclamação da República"),
+        (11, 20, "Dia da Consciência Negra"),
+        (12, 25, "Natal"),
     )
     include_sao_jose = False
     sao_jose_label = "São José"
@@ -21,7 +29,8 @@ class Brazil(WesternCalendar):
     include_sao_joao = False
     sao_joao_label = "São João"
     # Civil holidays
-    include_labour_day = True
+    include_labour_day = False
+    include_christmas = False
     include_servidor_publico = False
     servidor_publico_label = "Dia do Servidor Público"
     # Consciência Negra day
@@ -126,6 +135,7 @@ class BrazilDistritoFederal(Brazil):
         (4, 21, "Fundação de Brasília"),
         (11, 30, "Dia do Evangélico"),
     )
+    include_servidor_publico = True
 
 
 @iso_register('BR-ES')
